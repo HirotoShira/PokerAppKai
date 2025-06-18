@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント追加</title>
+</head>
+<body>
+    <h1>イベント追加</h1>
+    <form action="/platform/event/addEvent" method="POST">
+        <label for="eventName">イベント名：</label>
+        <input type="text" id="eventName" name="eventName" placeholder="イベント名" required>
+        <label for="eventDate">イベント日：</label>
+        <input type="date" id="eventDate" name="eventDate" placeholder="イベント日" required>
+        <label for="eventPlace">開催場所：</label>
+        <input type="text" id="eventPlace" name="eventPlace" placeholder="開催場所" required>
+        <label for="description">説明：</label>
+        <textarea name="description" id="description"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/platform/event">戻る</a>
+</body>

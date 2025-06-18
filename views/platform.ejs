@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="platform.css">
+</head>
+<body>
+    <nav class="nav-links">
+        <a href="/platform/individualRecord">個人成績</a>
+        <a href="/platform/addlog">成績入力</a>
+        <a href="/platform/event">イベント入力</a>
+    </nav>
+    <ul>
+        <% for(let event of events ) { %>
+            <li><%= event.eventName %>, <%= event.formattedDate %>, <%= event.eventPlace %>, <%= event.description %></li>
+        <% } %>
+    </ul>
+</body>
+</html>

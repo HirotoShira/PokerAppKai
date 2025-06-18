@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント</title>
+</head>
+<body>
+    <h1><%= foundEvent.eventName %></h1>
+    <p>開催日: <%= new Date(foundEvent.eventDate).toLocaleDateString('ja-JP') %></p>
+    <p>場所: <%= foundEvent.eventPlace %></p>
+    <p>説明: <%= foundEvent.description %></p>
+
+    <a href="/platform/event/<%= foundEvent._id %>/edit">編集する</a>
+    <form action="/platform/event/<%= foundEvent._id %>?_method=DELETE" method="POST" onsubmit="return confirm('本当に削除しますか？');">
+    <button type="submit">削除する</button>
+    </form>
+    <br>
+    <a href="/platform/event">イベント一覧に戻る</a>
+</body>
+</html>

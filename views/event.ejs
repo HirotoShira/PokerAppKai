@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント一覧</title>
+</head>
+<body>
+    <h1>イベント一覧</h1>
+    <ol>
+        <% for(let event of eventAll ) { %>
+            <li><a href="/platform/event/<%= event._id %>"><%= event.eventName %></a> <%= new Date(event.eventDate).toLocaleDateString('ja-JP') %> <%= event.eventPlace %> <%= event.description %></li>
+        <% } %>
+    </ol>
+    <a href="/platform/event/addEvent">新規作成</a>
+    <a href="/platform">戻る</a>
+</body>
+</html>

@@ -1,0 +1,12 @@
+node
+cd poker app
+npm
+めっちゃYES
+npm i express
+npm i ejs
+//道具を入れる
+
+npm i -g nodemon//－gはどこでも使えるグローバル
+
+nodemon index.js //サーバ立ち上げ続けておく
+localhost:3500

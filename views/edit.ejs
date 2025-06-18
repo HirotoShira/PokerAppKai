@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント編集</title>
+</head>
+<body>
+    <h1>イベント編集</h1>
+
+    <form action="/platform/event/<%= foundEvent._id %>?_method=PUT" method="POST">
+        <label for="eventName">イベント名：</label>
+        <input
+            type="text"
+            id="eventName"
+            name="eventName"
+            value="<%= foundEvent.eventName %>"
+            required
+        >
+
+        <label for="eventDate">開催日：</label>
+        <input
+            type="date"
+            id="eventDate"
+            name="eventDate"
+            value="<%= foundEvent.eventDate.toISOString().substring(0, 10) %>"
+            required
+        >
+
+        <label for="eventPlace">場所：</label>
+        <input
+            type="text"
+            id="eventPlace"
+            name="eventPlace"
+            value="<%= foundEvent.eventPlace %>"
+            required
+        >
+
+        <label for="description">説明：</label>
+        <textarea
+            id="description"
+            name="description"
+            rows="4"
+        ><%= foundEvent.description || '' %></textarea>
+
+        <br>
+        <button type="submit">更新する</button>
+    </form>
+
+    <a href="/platform/event">← 戻る</a>
+</body>
+</html>
